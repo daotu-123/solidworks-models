@@ -1,0 +1,43 @@
+# 默认：Git 自动判断文本/二进制，不做强制换行符转换
+# （本仓库以二进制 CAD 文件为主，避免 eol 规则误伤）
+* text=auto
+
+# ---- 文本文件显式声明 ----
+*.md   text
+*.txt  text
+*.yml  text
+*.yaml text
+
+# ---- SolidWorks 专有格式：二进制，禁止行尾转换与文本 diff ----
+*.SLDPRT binary
+*.SLDASM binary
+*.SLDDRW binary
+*.sldprt binary
+*.sldasm binary
+*.slddrw binary
+
+# ---- 其他 CAD / 中间格式 ----
+*.dwg  binary
+*.dxf  binary
+*.step binary
+*.stp  binary
+*.iges binary
+*.igs  binary
+*.x_t  binary
+*.stl  binary
+*.3mf  binary
+
+# ---- Office / 压缩包 ----
+*.docx binary
+*.xlsx binary
+*.pptx binary
+*.pdf  binary
+*.zip  binary
+*.7z   binary
+*.rar  binary
+
+# ---- 图片 ----
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
